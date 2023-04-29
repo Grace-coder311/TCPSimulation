@@ -1,0 +1,21 @@
+version:8 msg:"node 1 -> node 7 to change loc 2 -> 7" toPort:41007 move:7
+version:8 msg:"hello there" toPort:41007
+version:8 msg:"1 says hi to 15" toPort:41015
+version:8 msg:"move" toPort:41007 move:7
+version:8 msg:"node 1 to 15 should arrive now to reach" toPort:41015
+version:8 msg:"will not arrive cuz loc 1->15 is too far" toPort:41015
+version:8 msg:"node 1->7 to change loc 7->15" toPort:41007 move:15
+
+version:8 msg:"location 1 says hi to location 15" toPort:2020
+version:8 msg:"the sequence num should now be 2!" toPort:2020
+version:8 msg:"location 1 says hi to location 7" toPort:1919
+version:8 msg:"location 1 says hi to location 15 - AGAIN" toPort:1919
+version:8 msg:"seq num shu be 2" toPort:1818
+version:8 msg:"hi from loc 1 to loc 7" toPort:1919
+version:8 msg:"loc 1 says there are supposedly 7 sins" toPort:41007
+version:8 msg:"this should work" toPort:1818
+line:1 version:8 msg:"another message" toPort:1818
+line:1 version:8 msg:"nonsense!" toPort:1818
+line:1 version:8 destination:100 cmd:send date:12-1-1 msg:"this should work" toPort:41042
+line:1 version:8 destination:100 cmd:send date:12-1-1 msg:"this should NOT work"
+line:1 version:8 destination:100 cmd:send date:12-1-1 msg:"hello from the other side" toPort:1818
